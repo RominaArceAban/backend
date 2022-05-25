@@ -13,7 +13,7 @@ app.get("/", (request, response) => {
 })
 
 let count = 0
-app.get("/mvisitas", (request, response) => {
+app.get("/visitas", (request, response) => {
     count++
     response.send("La cantidad de visitas es:" + count)
 })
@@ -23,9 +23,6 @@ app.get("/fyh", (request, response) => {
     response.send({ fyh: fyh.toLocaleString() })
 })
 
-app.get('/', (request, response) => {
-    response.send({ msn: 'Hola Romi' })
-})
 
 const server = app.listen(PORT, () => {
     console.log(`Server http on ${PORT}...`)
